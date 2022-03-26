@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dipankardasdevopsprojects 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dipankardasdevopsprojects
+  template:
+    metadata:
+      labels:
+        app: dipankardasdevopsprojects 
+    spec:
+      containers:
+        - name: dipankardasdevopsprojects 
+          image: dipankar.azurecr.io/dipankardasdevopsprojects
+          ports:
+          - containerPort: 80
